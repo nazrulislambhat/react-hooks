@@ -45,28 +45,28 @@ export default function StateHook() {
           <em> useState</em> returns an array with exactely two values:
           <br />
           <br />
-          <p>
+          <span>
             The current state. During the first render, it will match the
             initial state you have passed
-          </p>
-          <p>
+          </span>
+          <span>
             The set function that lets you update the state to a different value
             and trigger a re-render
-          </p>
+          </span>
           <br />
           <br />
           <b>Caveats:</b>
           <br />
           <br />
-          <p>
+          <span>
             <em>useState</em> is a hook, so you can only call it{' '}
             <b>at the top level of your component</b> or your own Hooks. You
             can`t call inisde loops or conditions.
-          </p>
-          <p>
+          </span>
+          <span>
             The set function that lets you update the state to a different value
             and trigger a re-render
-          </p>
+          </span>
         </p>
       </div>
       <Link
