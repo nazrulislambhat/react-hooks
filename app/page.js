@@ -8,43 +8,43 @@ export default function Home() {
         </h2>
         <ul className="flex font-bold gap-8">
           <Link
-            href="/statehook"
+            href="/usestate"
             className="bg-[#75DBCD] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useState
           </Link>
           <Link
-            href="/effecthook"
+            href="/useeffect"
             className="bg-[#C9DBBA] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useEffect
           </Link>
           <Link
-            href="/refhook"
+            href="/useref"
             className="bg-[#DCDBA8] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useRef
           </Link>
           <Link
-            href="/contexthook"
+            href="/usecontext"
             className="bg-[#F5CDA7] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useContext
           </Link>
           <Link
-            href="/reducerhook"
+            href="/usereducer"
             className="bg-[#FE654F] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useReducer
           </Link>
           <Link
-            href="/memohook"
+            href="/usememo"
             className="bg-[#D8F1A0] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useMemo
           </Link>
           <Link
-            href="/layouteffecthook"
+            href="/uselayouteffect"
             className="bg-[#A4B0F5] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useLayoutEffect
