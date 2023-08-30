@@ -43,7 +43,7 @@ Custom hooks allow you to extract component logic into reusable functions. We'll
 
 ## Project Structure
 
-/
+
 ├── src/
 │ ├── components/
 │ │ ├── Counter.js
