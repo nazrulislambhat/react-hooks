@@ -5,20 +5,85 @@ import Link from 'next/link';
 
 export default function StateHook() {
   const [count, setCount] = useState(0);
+  const [text, setText] = useState('hello');
+  const [liked, setLiked] = useState(true);
+  const [name, setName] = useState('Taylor');
+  const [age, setAge] = useState(42);
+
+  function handleNameChange(e) {
+    setName(e.target.value);
+  }
+
+  function handleTextChange(e) {
+    setText(e.target.value);
+  }
+
+  function handleCheckboxChange(e) {
+    setLiked(e.target.checked);
+  }
+
   return (
     <div className="min-h-screen min-w-screen gap-24 flex flex-col items-center text-center p-24">
       <h1 className="font-bold text-3xl">useState</h1>
-      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between items-start">
+      {/* Form Two Variables Changing */}
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
         <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
-          Functionality:
+          Two Variables Changing Form:
+        </sup>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="input"
+        />
+        <button onClick={() => setAge(age + 1)} className="click">
+          Increment age
+        </button>
+        <p>
+          Hello, {name}. You are {age}.
+        </p>
+      </div>
+
+      {/* Checkbox Example */}
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
+        <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
+          Checkbox:
+        </sup>
+        <label>
+          <input
+            type="checkbox"
+            checked={liked}
+            onChange={handleCheckboxChange}
+            className="check flex items-center flex-row"
+          />
+          I liked this
+        </label>
+        <p>You {liked ? 'liked' : 'did not like'} this.</p>
+      </div>
+
+      {/* Text Field Example */}
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
+        <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
+          Text Field:
+        </sup>
+        <input value={text} onChange={handleTextChange} className="input" />
+        <p>You typed: {text}</p>
+        <button onClick={() => setText('hello')} className="click">
+          Reset
+        </button>
+      </div>
+      {/* Count Example */}
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between items-center">
+        <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
+          Count:
         </sup>
         <h2 className="">
           You clicked <b>{count} </b>times
         </h2>
-        <button onClick={() => setCount(count + 1)} className="underline">
+        <button onClick={() => setCount(count + 1)} className="click">
           Click me
         </button>
       </div>
+
       <div className="border-2 p-8 relative border-black rounded-md">
         <sup className="font-bold text-red-500 text-2xl absolute left-0 -top-8">
           Notes:
@@ -47,11 +112,9 @@ export default function StateHook() {
           <br />
           <span>
             The current state. During the first render, it will match the
-            initial state you have passed
-          </span>
-          <span>
-            The set function that lets you update the state to a different value
-            and trigger a re-render
+            initial state you have passed.
+            <br /> The set function that lets you update the state to a
+            different value and trigger a re-render
           </span>
           <br />
           <br />
@@ -61,11 +124,13 @@ export default function StateHook() {
           <span>
             <em>useState</em> is a hook, so you can only call it{' '}
             <b>at the top level of your component</b> or your own Hooks. You
-            can`t call inisde loops or conditions.
-          </span>
-          <span>
-            The set function that lets you update the state to a different value
-            and trigger a re-render
+            can`t call inisde loops or conditions. If you need that, extract a
+            new component and move the state into it. <br /> In Strict Mode,
+            React will <em>call your initilizer function twice</em> in order to
+            help find accidental impurities. This is development-only behaviour
+            and does not affect production. If your initilizer function is pure
+            `as it should be`, this should not affect the behaviour. The result
+            from one of the calls will be ignored.
           </span>
         </p>
       </div>
