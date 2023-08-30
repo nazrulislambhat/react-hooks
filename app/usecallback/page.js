@@ -8,7 +8,7 @@ export default function CallbackHook() {
       <h1 className="font-bold text-3xl">useCallback</h1>
       <Link
         href="/"
-        className="bg-[#CFEE9E] px-8 py-4 font-bold rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+        className="bg-[#0D0630] px-8 py-4 font-bold rounded-lg border-2 border-[#E6F9AF] text-[#E6F9AF] hover:underline hover:bg-[#E6F9AF] hover:text-[#0D0630] hover:border-[#0D0630]"
       >
         Home
       </Link>

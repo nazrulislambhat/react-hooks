@@ -20,29 +20,36 @@ export default function Home() {
             useEffect
           </Link>
           <Link
-            href="/useref"
-            className="bg-[#DCDBA8] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
-          >
-            useRef
-          </Link>
-          <Link
             href="/usecontext"
             className="bg-[#F5CDA7] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useContext
           </Link>
           <Link
-            href="/usereducer"
-            className="bg-[#FE654F] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+            href="/useref"
+            className="bg-[#DCDBA8] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
-            useReducer
+            useRef
           </Link>
           <Link
             href="/usememo"
-            className="bg-[#D8F1A0] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+            className="bg-[#FFFD98] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useMemo
           </Link>
+          <Link
+            href="/usecallback"
+            className="bg-[#75DBCD] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+          >
+            useCallback
+          </Link>
+          <Link
+            href="/usereducer"
+            className="bg-[#F7A072] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+          >
+            useReducer
+          </Link>
+
           <Link
             href="/uselayouteffect"
             className="bg-[#A4B0F5] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
