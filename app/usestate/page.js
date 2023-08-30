@@ -132,6 +132,29 @@ export default function StateHook() {
             `as it should be`, this should not affect the behaviour. The result
             from one of the calls will be ignored.
           </span>
+          <br />
+          <br />
+          <b>Updating state based on the previous state</b> Suppose the age is
+          42. This handler calls setAge(age + 1) three times: However, after one
+          click, age will only be 43 rather than 45! This is because calling the
+          set function does not update the age state variable in the already
+          running code. So each setAge(age + 1) call becomes setAge(43). To
+          solve this problem, you may pass an updater function to setAge instead
+          of the next state: <b>a =&gt; a + 1 </b>is your updater function. It
+          takes the pending state and calculates the next state from it. React
+          puts your updater functions in a queue. Then, during the next render,
+          it will call them in the same order: a =&gt; a + 1 will receive 42 as
+          the pending state and return 43 as the next state. a =&gt; a + 1 will
+          receive 43 as the pending state and return 44 as the next state. a
+          =&gt; a + 1 will receive 44 as the pending state and return 45 as the
+          next state. There are no other queued updates, so React will store 45
+          as the current state in the end. By convention, it`s common to name
+          the pending state argument for the first letter of the state variable
+          name, like a for age. However, you may also call it like prevAge or
+          something else that you find clearer. React may call your updaters
+          twice in development to verify that they are pure.
+          <br />
+          <br />
         </p>
       </div>
       <Link
