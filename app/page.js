@@ -3,13 +3,11 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <div className=" flex flex-col items-center text-center justify-between py-24 mx-auto my-24">
-        <h2 className="uppercase mb-24 font-semibold text-3xl tracking-wider">
-          React Hooks
-        </h2>
-        <ul className="flex font-bold gap-8">
+        <h2 className="uppercase mb-24 font-semibold text-3xl">React Hooks</h2>
+        <div className="flex font-bold flex-col sm:flex-row gap-8">
           <Link
             href="/usestate"
-            className="bg-[#75DBCD] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
+            className="bg-[#F1DABF] px-8 py-4 rounded-lg border-2 border-blue-950 text-blue-950 hover:underline"
           >
             useState
           </Link>
@@ -56,7 +54,7 @@ export default function Home() {
           >
             useLayoutEffect
           </Link>
-        </ul>
+        </div>
       </div>
     </main>
   );

@@ -6,7 +6,7 @@ export const metadata = {
 export default function UseStateLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[#75DBCD]">{children}</body>
+      <body className="bg-[#F1DABF]">{children}</body>
     </html>
   );
 }
