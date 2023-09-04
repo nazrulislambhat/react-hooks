@@ -23,10 +23,10 @@ export default function StateHook() {
   }
 
   return (
-    <div className="min-h-screen min-w-screen gap-24 flex flex-col items-center text-center p-24">
+    <div className="min-h-screen min-w-screen gap-12 flex flex-col items-center text-left p-6 sm:p-12">
       <h1 className="font-bold text-3xl">useState</h1>
       {/* Form Two Variables Changing */}
-      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-4 relative justify-between  items-center">
         <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
           Two Variables Changing Form:
         </sup>
@@ -36,7 +36,7 @@ export default function StateHook() {
           className="input"
         />
         <button onClick={() => setAge(age + 1)} className="click">
-          Increment age
+          Inc age
         </button>
         <p>
           Hello, {name}. You are {age}.
@@ -44,11 +44,11 @@ export default function StateHook() {
       </div>
 
       {/* Checkbox Example */}
-      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-4 relative justify-between  items-center">
         <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
           Checkbox:
         </sup>
-        <label>
+        <label className="flex">
           <input
             type="checkbox"
             checked={liked}
@@ -61,7 +61,7 @@ export default function StateHook() {
       </div>
 
       {/* Text Field Example */}
-      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between  items-center">
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-4 relative justify-between  items-center">
         <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
           Text Field:
         </sup>
@@ -72,7 +72,7 @@ export default function StateHook() {
         </button>
       </div>
       {/* Count Example */}
-      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-8 relative justify-between items-center">
+      <div className="border-2 border-black rounded-md flex flex-row gap-8 p-4 relative justify-between items-center">
         <sup className="font-bold text-red-500 text-xl absolute left-0 -top-8">
           Count:
         </sup>

@@ -15,10 +15,10 @@ export default function EffectHook() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center text-left  p-12">
+    <div className="min-h-screen flex flex-col items-center text-left p-6 sm:p-12">
       <h1
         ref={ref}
-        className="rounded-2xl opacity-100 text-white p-48 text-center text-[120px]"
+        className="rounded-2xl opacity-100 text-white p-12 sm:p-48 text-center text-[40px] sm:text-[120px]"
         style={{
           backgroundImage:
             'linear-gradient(90deg, rgba(10,167,255,1) 0%, rgba(0,5,93,1) 100%);',

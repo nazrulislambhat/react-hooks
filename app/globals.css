@@ -25,7 +25,7 @@
   border: none;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: .5rem 1rem;
 }
 .click {
   padding: 0.5rem 1rem;
@@ -43,6 +43,6 @@
   margin: 5px;
 }
 input.check {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
