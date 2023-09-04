@@ -1,9 +1,19 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import reactLogo from '../public/react.svg';
 export default function Home() {
   return (
     <main className="min-h-screen">
       <div className=" flex flex-col items-center text-center justify-between py-24 mx-auto my-24">
-        <h2 className="uppercase mb-24 font-semibold text-3xl">React Hooks</h2>
+        <Image
+          src={reactLogo}
+          width={100}
+          height={100}
+          alt="React Logo"
+          className="mb-12"
+        />
+
+        <h2 className="uppercase mb-12 font-semibold text-3xl">React Hooks</h2>
         <div className="flex font-bold flex-col sm:flex-row gap-8">
           <Link
             href="/usestate"
