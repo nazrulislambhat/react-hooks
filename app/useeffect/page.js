@@ -1,11 +1,31 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { FadeInAnimation } from './animation.js';
+
 export default function EffectHook() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const animation = new FadeInAnimation(ref.current);
+    animation.start(1000);
+    return () => {
+      animation.stop();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center text-left  p-12">
-      <h1 className="font-bold text-3xl">useEffect</h1>
+      <h1
+        ref={ref}
+        className="rounded-2xl opacity-100 text-white p-48 text-center text-[120px]"
+        style={{
+          backgroundImage:
+            'linear-gradient(90deg, rgba(10,167,255,1) 0%, rgba(0,5,93,1) 100%);',
+        }}
+      >
+        useEffect
+      </h1>
       <br />
       <br />
       <p>
